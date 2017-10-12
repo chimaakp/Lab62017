@@ -70,7 +70,7 @@ Run `git status` before and after each of these commands.
 1.  What kind of information does `git status` report?
 
     ```
-
+It tells you changes that need to be commited
 
 
     ```
@@ -78,7 +78,7 @@ Run `git status` before and after each of these commands.
 2.  What does `git add names.txt` do?
 
     ```
-
+proposes to add the text file to the local repository
 
 
     ```
@@ -87,7 +87,7 @@ Run `git status` before and after each of these commands.
 
     ```
 
-
+actually adds the text file to the local repository
 
     ```
 
@@ -108,14 +108,14 @@ Run `git status` before and after each of these commands.
 
     ```
 
-
+adds all untracked files
 
     ```
 
 5.  What does `git commit` (without -m) do?
 
     ```
-
+Opens a vim editor and allows you te leave a multi line commit message
 
 
     ```
@@ -124,7 +124,7 @@ Run `git status` before and after each of these commands.
     good practice) what command would you use?
 
     ```
-
+git commit
 
 
     ```
@@ -133,7 +133,7 @@ Run `git status` before and after each of these commands.
 
     ```
 
-
+creates a log/record of all your commits
 
     ```
 
@@ -163,7 +163,7 @@ Run the following commands:
     **Staged**
 
     ```
-
+Names.txt - changes to be committed
 
 
     ```
@@ -171,15 +171,13 @@ Run the following commands:
     **Unstaged**
 
     ```
-
-
-
+movies.txt- files that have previously been staged. changes have been made, but they have not been added
     ```
 
     **Untracked**
 
     ```
-
+food.txt -files in the directory that have never been added
 
 
     ```
@@ -196,14 +194,14 @@ Run the following commands:
 
     ```
 
-
+git add <file name>
 
     ```
 
 3.  What command do you run to unstage changes?
 
     ```
-
+git reset <file name>
 
 
     ```
@@ -216,7 +214,7 @@ Run the following commands:
 1.  What does `git diff` display?
 
     ```
-
+shows changes in the unstaged files
 
 
     ```
@@ -225,7 +223,7 @@ Run the following commands:
 
     ```
 
-
+shows changes in staged files
 
     ```
 
@@ -234,7 +232,8 @@ Run the following commands:
     confirm they worked.
 
     ```
-
+git reset Names.txt
+git add movies.txt
 
 
     ```
@@ -245,7 +244,7 @@ Run the following commands:
 
     ```
 
-
+two copies of movies. one is staged and the other is unstaged.This is some type of safety feature, so that if you forget to commit, you can still go back to a staged version
 
     ```
 
@@ -253,7 +252,7 @@ Run the following commands:
     Explain what you think is going on.
 
     ```
-
+says "deleted:names.txt", still keeps track of the file even though its deleted because theor is a copy on the local repository
 
 
     ```
@@ -262,7 +261,7 @@ Run the following commands:
     and explain.
 
     ```
-
+cannot find movies file, so says its been deleted. notices a new file, last-movies
 
 
     ```
@@ -273,7 +272,8 @@ Run the following commands:
 
     ```
 
-
+git add .
+git commit -m "question #7"
 
     ```
 
@@ -281,7 +281,7 @@ Run the following commands:
     same thing. What does it hold?
 
     ```
-
+it holds a copy of the file before the commit
 
 
     ```
@@ -291,7 +291,7 @@ Run the following commands:
 
     ```
 
-
+all files might not be ready too be committed
 
     ```
 
@@ -310,7 +310,7 @@ Run the following commands:
 
     ```
 
-
+uncommits changes from the last commit, and brings back files that have been deleted
 
     ```
 
@@ -326,7 +326,7 @@ Run the following commands:
 1.  What does `git reset --hard ``"HEAD^"`` `do?
 
     ```
-
+reverts back to the previous commit
 
 
     ```
@@ -334,7 +334,7 @@ Run the following commands:
 2.  What is the difference between `--hard` and `--soft`?
 
     ```
-
+much more likely to lose something important with --hard
 
 
     ```
@@ -342,15 +342,14 @@ Run the following commands:
 3.  What do you think `HEAD` means?
 
     ```
-
-
+reference to the ast commit of the current branch
     ```
 
 4.  What do you think `HEAD^` means?
 
     ```
 
-
+first parent of the checked out branch
     ```
 
 5.  On Canvas, put two things: 1) a link to your repo (as a comment on the assignment), and 2) submit this document.
