@@ -185,7 +185,7 @@ food.txt -files in the directory that have never been added
 1.  If you run `git commit` what changes will be committed (***DON’T DO IT***)?
 
     ```
-
+the names file on the repository will be updated
 
 
     ```
